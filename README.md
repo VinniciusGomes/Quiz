@@ -36,7 +36,7 @@ Um projeto para acompanhar a aprendizagem de crianças entre 8 e 10 anos, um qui
 Criar um arquivo na raiz do projeto chamado
 
 ```
-.htacess
+.htaccess
 ```
 
 Cole o código abaixo
@@ -59,8 +59,6 @@ RewriteRule !\.(css|js|icon|zip|rar|png|jpg|gif|pdf|eot|woff|woff2|ttf)$ index.p
 AddType application/x-httpd-php .php .phtml
 ```
 
-Execute o servidor apache
-
 ## Autor
 
 * **Vinnicius Gomes**
@@ -71,4 +69,4 @@ Veja também a lista de [contributors](https://github.com/VinniciusGomes/Pedagog
 ## Licença
 
 
-Este projeto está licenciado sob o MIT License - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes
+Este projeto está licenciado sob o MIT License - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes.
