@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <base href="/localhost">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--  Icone  -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/icone.png">
+
+    <!--  Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="../assets/css/icons/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/fonts.css">
+
+    <!--  CSS  -->
+    <link rel="stylesheet" href="../assets/css/materialize.css" media="screen,projection">
+    <link rel="stylesheet" href="../assets/css/style.css" media="screen,projection">
+
+    <!-- HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+    <title>
+        <?= $title ?>
+    </title>
+
+</head>
+
+<body>
+
+    <section>
+        <?php $this->controller->renderView(); ?>
+    </section>
+
+</body>
+
+<!-- Importação dos scripts -->
+<script type="text/javascript" src="../assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/materialize.min.js"></script>
+
+</html>

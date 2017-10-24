@@ -1,0 +1,88 @@
+<ul class="listaId"><i class="fa fa-user-circle" aria-hidden="true" style="color: #fff"></i>
+    <li class="idUser">
+        <?php echo $_SESSION['nome'].' | ';?>
+    </li>
+    <li class="data">
+        <?php echo date('d/m/Y', time());?>
+    </li>
+</ul>
+
+<div class="container">
+    <h5 style="font-family: 'Roboto', sans-serif; color: #fff">Painel do professor</h5>
+
+    <br><br><br><br><br>
+
+    <div class="row">
+
+        <div class="col s3 m3">
+            <div class="card withe darken-1">
+                <div class="card-content white-text">
+                    <div align="center">
+                        <span class="card-title" style="color: #000">Usuários</span>
+                        <p style="color: #000">Altere as informações ou crie um novo usuário clicando no botão.</p>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <div align="center">
+                        <a href="editarusuarios" class="waves-effect waves-light btn laranja"><i class="material-icons left">person</i>Ajustes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s3 m3">
+            <div class="card withe darken-1">
+                <div class="card-content white-text">
+                    <div align="center">
+                        <span class="card-title" style="color: #000">Cadastros</span>
+                        <p style="color: #000">Visualize todos os usuários cadastrados no sistema e delete.</p>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <div align="center">
+                        <a href="listarusuarios" class="waves-effect waves-light btn laranja"><i class="material-icons left">assignment_ind</i>Verificar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s3 m3">
+            <div class="card withe darken-1">
+                <div class="card-content white-text">
+                    <div align="center">
+                        <span class="card-title" style="color: #000">Questões</span>
+                        <p style="color: #000">Altere as questões, ou adicione questões clicando no botão.</p>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <div align="center">
+                        <a href="editarperguntas" class="waves-effect waves-light btn laranja"><i class="material-icons left">edit</i>Editar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s3 m3">
+            <div class="card withe darken-1">
+                <div class="card-content white-text">
+                    <div align="center">
+                        <span class="card-title" style="color: #000">Rank</span>
+                        <p style="color: #000">Visualize o rank geral dos alunos e acompanhe os progressos.</p>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <div align="center">
+                        <a href="rank" class="waves-effect waves-light btn laranja"><i class="material-icons left">equalizer</i>Analisar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><br><br>
+
+    <div align="center">
+        <a href="sair" class=" s12 m12 btn-floating btn-large waves-effect waves-light laranja"><i class="material-icons">exit_to_app</i></a><br>
+        <p style="color: #fff">Sair</p>
+    </div>
+
+</div>
