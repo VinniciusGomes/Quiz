@@ -14,10 +14,16 @@ class ListarRank{
 			 }else{
 				$icone = "<i class='fa fa-trophy' aria-hidden='true' style='font-size: 1.5em; color: #cd7f32; float: right; width: 1%;'></i>"; // Bronze
 			 }
-
-			 echo "<li class='collection-item s4 m4'>".$icone."<div style='color: #000; float: right; width: 0%;'><br>" .$result[$i]['rank_pontuacao']."</div>
-            		<div style='color: #000'><div style='font-size: .9em; font-weight: 700;'>Nome </div>".$result[$i]['log_nome']."</div>
-        		  </li>";
+             
+            if($result[$i]['rank_pontuacao'] <= 9){
+			     echo "<li class='collection-item s4 m4'>".$icone."<div style='color: #000; float: right; width: 0%;'><br>0" .$result[$i]             ['rank_pontuacao']."</div>
+            		  <div style='color: #000'><div style='font-size: .9em; font-weight: 700;'>Nome </div>".$result[$i]['log_nome']."</div>
+        		      </li>";
+            }else{
+                echo "<li class='collection-item s4 m4'>".$icone."<div style='color: #000; float: right; width: 0%;'><br>" .$result[$i]             ['rank_pontuacao']."</div>
+            		  <div style='color: #000'><div style='font-size: .9em; font-weight: 700;'>Nome </div>".$result[$i]['log_nome']."</div>
+        		      </li>";
+            }    
 		  }
         }else{
             $result = Db::queryAll("SELECT log_nome, rank_pontuacao 

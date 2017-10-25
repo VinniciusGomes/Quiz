@@ -7,31 +7,31 @@
 <body onLoad="relogio()">
 
     <script language="javaScript">
-        //        var min, seg;
-        //        min = 0;
-        //        seg = 05;
-        //
-        //        function relogio() {
-        //            if ((min > 0) || (seg > 0)) {
-        //                if (seg == 0) {
-        //                    seg = 59;
-        //                    min = min - 1
-        //                } else {
-        //                    seg = seg - 1;
-        //                }
-        //                if (min.toString().length == 1) {
-        //                    min = "0" + min;
-        //                }
-        //                if (seg.toString().length == 1) {
-        //                    seg = "0" + seg;
-        //                }
-        //                document.getElementById('spanRelogio').innerHTML = min + ":" + seg;
-        //                setTimeout('relogio()', 1000); //Velocidade
-        //            } else {
-        //                document.getElementById('spanRelogio').innerHTML = "00:00";
-        //                location.reload();
-        //            }
-        //        }
+                var min, seg;
+                min = 3;
+                seg = 1;
+        
+                function relogio() {
+                    if ((min > 0) || (seg > 0)) {
+                        if (seg == 0) {
+                            seg = 59;
+                            min = min - 1
+                        } else {
+                            seg = seg - 1;
+                        }
+                        if (min.toString().length == 1) {
+                            min = "0" + min;
+                        }
+                        if (seg.toString().length == 1) {
+                            seg = "0" + seg;
+                        }
+                        document.getElementById('spanRelogio').innerHTML = min + ":" + seg;
+                        setTimeout('relogio()', 1000); //Velocidade
+                    } else {
+                        document.getElementById('spanRelogio').innerHTML = "00:00";
+                        document.respostas.submit();    
+                    }
+                }
 
     </script>
 
@@ -63,7 +63,7 @@
 
         <p style="font-weight: 300; text-align: left; color: #FFF">Escolha a alternativa correta</p>
 
-        <form action="resposta" method="post" autocomplete="off">
+        <form action="resposta" name="respostas" method="post" autocomplete="off">
             <div class="row">
                 <div class="col s5 m5">
                     <?php
