@@ -3,6 +3,14 @@
 
 Um projeto para acompanhar a aprendizagem de crianças entre 8 e 10 anos, um quiz com questões de diversas matérias, com um painel intuitivo para o professor acompanhar o histórico dos alunos, sabendo assim se ele teve alguma evolução na aprendizagem.
 
+### Versionamento Semântico
+
+Padrão do versionamento
+
+```
+X.y.z - X é a versão Maior, Y é a versão Menor, e Z é a versão de Correção. 
+```
+
 ### Estrutura do site
 
 ```
