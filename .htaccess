@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # Alguns servidores usam isso
-# RewriteBase /
+# RewriteBase /sistemas/quiz 
 
 # Condições se não for um arquivo ou diretorio
 RewriteCond %(REQUEST_FILENAME) !-f
