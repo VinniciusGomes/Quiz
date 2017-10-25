@@ -11,7 +11,7 @@ Padrão do versionamento
 x.y.z - X é a versão Maior, Y é a versão Menor, e Z é a versão de Correção. 
 ```
 
-### Estrutura do site
+### Estrutura de arquivos
 
 ```
   Quiz/
