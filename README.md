@@ -69,12 +69,15 @@ RewriteRule !\.(css|js|icon|zip|rar|png|jpg|gif|pdf|eot|woff|woff2|ttf)$ index.p
 AddType application/x-httpd-php .php .phtml
 ```
 
-## Autor
+## Desenvolvedores
 
 * **Vinnicius Gomes**
 * **Felipe Novais**
 
-Veja também a lista de [contributors](https://github.com/VinniciusGomes/Pedagogia/contributors) que participaram deste projeto.
+#### Colaboradores
+
+**Professoras** - Ellen Juliane, Ariadne Monteiro, Rafaela Bastos e Arielli Nely
+
 
 ## Licença
 
