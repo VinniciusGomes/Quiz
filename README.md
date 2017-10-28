@@ -46,8 +46,8 @@ x.y.z - X é a versão Maior, Y é a versão Menor, e Z é a versão de Correç�
 
 ## Desenvolvedores
 
-* **Vinnicius Gomes**
-* **Felipe Novais**
+* **@VinniciusGomes**
+* **@FelipeNS**
 
 
 ### Colaboradores
