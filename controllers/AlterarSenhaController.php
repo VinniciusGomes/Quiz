@@ -9,9 +9,9 @@
                 if(isset($id) && isset($senha)){
                     $result = $alterar->alterar($senha, $id);
                     if($result != 0){
-                        $this->redirect('editarusuarios');
+                        $this->redirect('editar-usuarios');
                     }else{
-                        $this->redirect("editarusuarios?e=3");
+                        $this->redirect("editar-usuarios?e=3");
                     }
                 }
             }else{

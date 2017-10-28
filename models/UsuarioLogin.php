@@ -1,7 +1,7 @@
 <?php
     class UsuarioLogin{
+        private $baseUrl = "sistemas/quiz/";
         public function login($usuario, $senha){
-            Db::connect('localhost', 'root', '', 'quizpedag');
             $result = Db::queryOne("SELECT log_id, log_usuario, log_nome, log_senha, log_nivel FROM login WHERE log_usuario = ?", array($usuario));
             if($result['log_senha'] == $senha){
                 session_start();

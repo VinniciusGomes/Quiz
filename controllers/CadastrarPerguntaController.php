@@ -15,7 +15,7 @@ class CadastrarPerguntaController extends Controller{
 
                 $result = $cadastrar->cadastrar($enunciado, $altCorreta, $altInc1, $altInc2, $altInc3, $materia);
                 if($result != 0){
-                    $this->redirect('editarperguntas');
+                    $this->redirect('editar-perguntas');
                 }else{
                     echo "Nao foi bagaça";
                 }

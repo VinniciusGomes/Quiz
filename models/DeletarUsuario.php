@@ -1,7 +1,6 @@
 <?php
 class DeletarUsuario{
 	public function deletar($id){
-		Db::connect('localhost', 'root', '', 'quizpedag');
         // Exclui do rank primeiro
         $this->deletarRank($id);
         // Exclui os testes feitos pelo usuário

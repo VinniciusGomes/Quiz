@@ -1,7 +1,6 @@
 <?php
 	class BuscarPergunta{
 		public function buscar(){
-			Db::connect('localhost', 'root', '', 'quizpedag');
 			$result = Db::queryAll("SELECT perg_id, perg_enunciado FROM pergunta p 
                         WHERE p.perg_id NOT IN (SELECT test_perg_id FROM teste WHERE test_data=? AND test_log_id=?) 
                         ORDER BY rand()", array(date("Y-m-d", time()), $_SESSION['id_user']));
@@ -19,11 +18,11 @@
 
 			for ($i=0; $i < sizeof($result); $i++) { 
                 if($i == 0){
-                    echo "<p><input class='with-gap' name='alternativa' type='radio' id='alternativa".($i+1)."' value='".$result[$i]['alt_resposta']."'".($i+1)."' checked required />
+                    echo "<p><input class='with-gap' name='alternativa' type='radio' id='alternativa".($i+1)."' value='".$result[$i]['alt_resposta']."' checked required />
                         <label for='alternativa".($i+1)."' style='color: #FFF'>".$result[$i]['alt_texto']."</label>
                       </p>";    
                 }else{
-                    echo "<p><input class='with-gap' name='alternativa' type='radio' id='alternativa".($i+1)."'value='".$result[$i]['alt_resposta']."'".($i+1)."' required />
+                    echo "<p><input class='with-gap' name='alternativa' type='radio' id='alternativa".($i+1)."'value='".$result[$i]['alt_resposta']."' required />
                         <label for='alternativa".($i+1)."' style='color: #FFF'>".$result[$i]['alt_texto']."</label>
                       </p>";
                 }

@@ -20,13 +20,20 @@
         public function process($params){
             // Url depois de ser analisada pelo metodo parseUrl()
             $parsedUrl = $this->parseUrl($params[0]);
+
+            // Adicionado após erro do servidor
+            while($this->base > 0){
+                array_shift($parsedUrl);
+                $this->base--;  
+            }
+
             // Se a URL passada for vazia, redireciona para a pagina principal
             if(empty($parsedUrl[0])){
                 $this->redirect('login'); // Página inicial
             }
             // Decide qual é o nome da classe a ser usado, pegando o primeiro parametro da URL analisada
             // e removendo do array principal ja que não é mais necessario.
-            $controllerClass = $this->dashesToCamel(array_shift($parsedUrl)). 'Controller';
+            $controllerClass = $this->dashesToCamel($parsedUrl[0]).'Controller';
             // Apos ver se existe url, vamos pegar a classe criada e checar se essa classe existe.
             if(file_exists("controllers/$controllerClass.php")){
                 $this->controller = new $controllerClass;
@@ -39,6 +46,9 @@
             // As variaveis para serem usadas são recebidas do objeto interno
             $this->data['title'] = $this->controller->head['title'];
             $this->data['description'] = $this->controller->head['description'];
+            // Adicionado após erro do servidor
+            // Url base do site
+            $this->data['baseUrl'] = $this->baseUrl;
             // coloca o template principal não interno default
             $this->view = 'layout';
         }
@@ -53,6 +63,8 @@
             $parsedUrl = parse_url($url);
             // remove / do começo do caminho da url
             $parsedUrl["path"] = ltrim($parsedUrl["path"], "/");
+            // Adicionado após erro do servidor
+            //$parsedUrl["path"] = rtrim($parsedUrl["path"], "/");
             // remove qualquer espaço em branco da url
             $parsedUrl["path"] = trim($parsedUrl["path"]);
             // retorna a variavel explodida da url em um array em que cada valor é separado por /

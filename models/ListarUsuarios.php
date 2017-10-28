@@ -1,9 +1,8 @@
 <?php
 class ListarUsuarios{
 	public function listar(){
-		Db::connect('localhost', 'root', '', 'quizpedag');
 		$result = Db::queryAll("SELECT log_id, log_nome, log_usuario, log_senha, log_dat_cad, log_nivel 
-			FROM login WHERE log_id<>1 ORDER BY log_nome");
+			FROM login WHERE log_nome<>'Administrador' ORDER BY log_nome");
 
 		for ($i=0; $i < sizeof($result); $i++) { 
 			$nivel = $result[$i]['log_nivel'];
@@ -17,7 +16,7 @@ class ListarUsuarios{
 			echo "<li>
 			<div class='collapsible-header' style='background-color: #f5f5f5;'>
 			<n class='col s4 m4' style='color: #000'>".$result[$i]['log_nome'].$cat."</n>
-			<a href='deletarusuario?id=".$result[$i]['log_id']."' title='Clique aqui para deletar'>
+			<a href='deletar-usuario?id=".$result[$i]['log_id']."' title='Clique aqui para deletar'>
 			<i class= 'secondary-content material-icons' 
 			style='color: red'>delete_forever</i>
 			</a>

@@ -17,12 +17,12 @@ class CadastrarUsuarioController extends Controller{
                 if($verifica == null){
                     $result = $cadastrar->cadastrar($nick, $nomeComp, $senha, $nivel);
                     if($result != 0){
-                        $this->redirect('editarusuarios');
+                        $this->redirect('editar-usuarios');
                     }else{
                         echo "Nao foi";
                     }
                 }else{
-                    $this->redirect('editarusuarios?e=1');
+                    $this->redirect('editar-usuarios?e=1');
                 }
         }
         }else{

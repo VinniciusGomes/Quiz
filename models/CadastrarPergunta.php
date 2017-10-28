@@ -1,7 +1,6 @@
 <?php
 	class CadastrarPergunta{
 		public function cadastrar($enunciado, $altCorreta, $altInc1, $altInc2, $altInc3, $materia){
-			Db::connect('localhost', 'root', '', 'quizpedag');
 			// Inserindo pergunta no banco
 			$result = Db::queryCount("INSERT INTO pergunta (perg_enunciado, perg_cat_id) VALUES (?,?)", array($enunciado, $materia));
 			

@@ -6,7 +6,7 @@
                 $id = $_GET['id'];
                 $result = $deletar->deletar($id);
                 if($result != 0){
-                    $this->redirect('editarperguntas');
+                    $this->redirect('editar-perguntas');
                 }else{
                     echo "";
                 }

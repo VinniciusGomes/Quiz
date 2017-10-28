@@ -13,6 +13,9 @@
         protected  $data = array();
         protected  $view = '';
         protected  $head = array('title' => '', 'description' => '');
+        // Adicionado após erro do servidor
+        protected $base = 2;
+        public $baseUrl = "sistemas/quiz/";
         /* process($params);
         *  Metodo abstrato do processamento dos parametros,
         *  cada controller vai ter o seu proprio tipo de processamento por isso abstrato.
@@ -29,6 +32,7 @@
             // e requisita o view.phtml
             if($this->view){
                 extract($this->data);
+                extract($this->data, EXTR_PREFIX_ALL, "");
                 require "views/$this->view.phtml";
             }
         }
@@ -36,6 +40,7 @@
         *  Metodo publico para redirecionamento de uma pagina para outra e termina o script
         */
         public function redirect($url){
+            $url = $this->baseUrl . $url;
             header("Location: /$url");
             header("Connection: close");
             exit;

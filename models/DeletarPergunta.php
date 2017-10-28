@@ -1,7 +1,6 @@
 <?php
 	class DeletarPergunta{
 		public function deletar($id){
-			Db::connect('localhost', 'root', '', 'quizpedag');
 			// Excluindo alternativas primeiro
             $this->deletarAlts($id);
             // Excluindo testes contendo a pergunta

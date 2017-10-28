@@ -1,10 +1,8 @@
 <?php
 class ListarRank{
 	public function listar(){
-		Db::connect('localhost', 'root', '', 'quizpedag');
-
         if($_SESSION['nivel'] == 1){
-            $result = Db::queryAll("SELECT log_nome, rank_pontuacao 
+            $result = Db::queryAll("SELECT DISTINCT log_nome, rank_pontuacao 
                 FROM rank INNER JOIN login ON rank.rank_log_id=login.log_id ORDER BY rank_pontuacao DESC LIMIT 10");
 		  for ($i=0; $i < sizeof($result); $i++) { 	
 			 if($i >= 0 && $i <3){

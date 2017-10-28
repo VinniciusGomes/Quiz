@@ -8,6 +8,7 @@
             if(empty($result)){
                 $this->redirect("perguntas");
             }else{
+                $_SESSION['ja'] = 1;
                 $this->redirect("tutorial?e=1");
             }
         }

@@ -6,7 +6,7 @@ class DeletarUsuarioController extends Controller{
         $id = $_GET['id'];
         $result = $deletar->deletar($id);
             if($result != 0){
-                $this->redirect('listarusuarios');
+                $this->redirect('listar-usuarios');
             }else{
                 echo "";
             }

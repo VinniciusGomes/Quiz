@@ -1,7 +1,6 @@
 <?php
 class CadastrarUsuario{
 	public function cadastrar($nick, $nome, $senha, $nivel){
-		Db::connect('localhost', 'root', '', 'quizpedag');
 		// Inserindo usuario no banco
 		$verifica = $this->verificaNick($nick);
 
@@ -9,7 +8,7 @@ class CadastrarUsuario{
 			$result = Db::queryCount("INSERT INTO login (log_usuario, log_nome, log_senha, log_nivel, log_dat_cad)  VALUES (?, ?, ?, ?, ?)", array($nick, $nome, $senha, $nivel, date('Y/m/d', time())));
 			return $result;
 		}else{
-			EditarUsuariosController::redirect('editarusuarios?e=2');
+			EditarUsuariosController::redirect('editar-usuarios?e=2');
 		}
 	}
 
