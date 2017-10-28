@@ -52,7 +52,8 @@ x.y.z - X é a versão Maior, Y é a versão Menor, e Z é a versão de Correç�
 
 ### Colaboradores
 
-**Orientador** - Wesley Costa
+**Orientador** - Wesley Costa<br>
+
 **Professoras** - Ellen Juliane, Ariadne Monteiro, Rafaela Bastos e Arielli Nely
 
 
