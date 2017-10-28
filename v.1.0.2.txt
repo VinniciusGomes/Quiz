@@ -1,9 +1,0 @@
-• Versão 1.1.0 (Servidor) - Nesta versão inclui as seguintes atualizações:
-
-- Arquivos configurados para rodar no servidor
-- Alteração das rotas
-- Alteração na importação de arquivos
-- Alteração para importação externa do Materialize Icons e do Font Awesome 
-- Várias problemas e erros foram corrigidos
-- Aprimoramento no desempenho
-- Melhorias na estabilidade e muito mais
