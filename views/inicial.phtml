@@ -1,0 +1,34 @@
+<body onLoad="relogio()" style="background-color: #fff; background-image: url(assets/img/outras/loading.gif); background-position: center top;">
+
+    <script language="javaScript">
+        var min, seg;
+        min = 0;
+        seg = 4;
+
+        function relogio() {
+            if ((min > 0) || (seg > 0)) {
+                if (seg == 0) {
+                    seg = 59;
+                    min = min - 1
+                } else {
+                    seg = seg - 1;
+                }
+                if (min.toString().length == 1) {
+                    min = "0" + min;
+                }
+                if (seg.toString().length == 1) {
+                    seg = "0" + seg;
+                }
+                setTimeout('relogio()', 1000); //Velocidade
+            } else {
+                window.location.href = 'login';
+            }
+        }
+    </script>
+
+    <div align="center"><br><br><br><br>
+        <div class="section"></div>
+        <div class="section"></div><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1 style="color: #3c81f8; font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 1.3em;">Carregando...</h1>
+    </div>
+</body>

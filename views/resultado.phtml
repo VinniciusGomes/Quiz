@@ -1,1 +1,19 @@
-<div class="contaierner"> <div align="center"> <div class="section"></div><br><br><img src="assets/img/outras/trofeu.png" width="12%" height="12%"><br><div class="section"></div><h1 style="color: #FFF; font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 3em;">Parabéns você terminou o Quiz</h1><br><br><h1 style="color: #FFF; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 2.5em;">Você acertou: <?php echo $_SESSION['pontuacao'];?> </h1><br><div class="section"></div><a href="menu" class="waves-effect waves-light btn laranja"><i class="material-icons left">arrow_back</i>Menu</a> <a href="menu" class="waves-effect waves-light btn laranja">Joguinho<i class="material-icons right">videogame_asset</i></a> </div></div>
+<div class="contaierner">
+    <div align="center">
+        <div class="section"></div><br><br>
+        <img src="assets/img/outras/trofeu.png" width="12%" height="12%"><br>
+        <div class="section"></div>
+        <h1 style="color: #FFF; font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 3em;">Parabéns você terminou o Quiz</h1><br><br>
+        <h1 style="color: #FFF; font-family: 'Roboto', sans-serif; font-weight: 300; font-size: 2.5em;">Você acertou
+            <?php echo $_SESSION['pontuacao'] . " perguntas";?>
+        </h1><br>
+        <div class="section"></div>
+        <a href="menu" class="waves-effect waves-light btn laranja"><i class="material-icons left">arrow_back</i>Menu</a>
+        <?php
+            if($_SESSION['pontuacao'] >= 7){
+                echo "<a href='menu' class='waves-effect waves-light btn laranja'>Joguinho
+                <i class='material-icons right'>videogame_asset</i></a>";
+            }
+        ?>
+    </div>
+</div>

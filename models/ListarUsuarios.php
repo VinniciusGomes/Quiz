@@ -8,9 +8,9 @@ class ListarUsuarios{
 			$nivel = $result[$i]['log_nivel'];
 			
 			if($nivel==0){
-				$cat = "<i class= 'secondary-content material-icons' style='color: #000; float: right;'>person</i>";
+				$cat = "<i class= 'secondary-content material-icons' style='color: #000; float: left;'>person</i>";
 			}else{
-				$cat = "<i class= 'secondary-content material-icons' style='color: #000; float: right;'>school</i>";
+				$cat = "<i class= 'secondary-content material-icons' style='color: #000; float: left;'>school</i>";
 			}
 
 			echo "<li>
@@ -18,7 +18,7 @@ class ListarUsuarios{
 			<n class='col s4 m4' style='color: #000'>".$result[$i]['log_nome'].$cat."</n>
 			<a href='deletar-usuario?id=".$result[$i]['log_id']."' title='Clique aqui para deletar'>
 			<i class= 'secondary-content material-icons' 
-			style='color: red'>delete_forever</i>
+			style='color: red; float: right;'>delete_forever</i>
 			</a>
 			</div>
 			<div class='collapsible-body col s4 m4' style='background-color: #fcfcfc; color: #000'>

@@ -29,7 +29,7 @@
 
             // Se a URL passada for vazia, redireciona para a pagina principal
             if(empty($parsedUrl[0])){
-                $this->redirect('login'); // Página inicial
+                $this->redirect('inicial'); // Página inicial
             }
             // Decide qual é o nome da classe a ser usado, pegando o primeiro parametro da URL analisada
             // e removendo do array principal ja que não é mais necessario.

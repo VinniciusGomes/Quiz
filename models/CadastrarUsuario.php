@@ -1,5 +1,6 @@
 <?php
 class CadastrarUsuario{
+	public $baseUrl = "sistemas/quiz/";
 	public function cadastrar($nick, $nome, $senha, $nivel){
 		// Inserindo usuario no banco
 		$verifica = $this->verificaNick($nick);
@@ -8,7 +9,7 @@ class CadastrarUsuario{
 			$result = Db::queryCount("INSERT INTO login (log_usuario, log_nome, log_senha, log_nivel, log_dat_cad)  VALUES (?, ?, ?, ?, ?)", array($nick, $nome, $senha, $nivel, date('Y/m/d', time())));
 			return $result;
 		}else{
-			EditarUsuariosController::redirect('editar-usuarios?e=2');
+			$this->redirect('editar-usuarios?e=2');
 		}
 	}
 
@@ -25,5 +26,12 @@ class CadastrarUsuario{
 		$result = Db::queryAll("SELECT log_usuario FROM login WHERE log_usuario=?", array($nick));
 		return $result;
 	}
+
+	public function redirect($url){
+            $url = $this->baseUrl . $url;
+            header("Location: /$url");
+            header("Connection: close");
+            exit;
+        }
 }
 ?>
