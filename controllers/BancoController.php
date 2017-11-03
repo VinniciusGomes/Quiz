@@ -6,7 +6,7 @@
             $result = $banco->select();
             
             for($i=0; $i < sizeof($result); $i++){
-                echo "per_id: " . $result[$i]['perg_id'] . "----------- perg_enunciado: " . $result[$i]['perg_enunciado'] . "<br>";
+                echo "log_id: " . $result[$i]['log_id'] . "----------- log_usuario: " . $result[$i]['log_nome'] . "----------- log_senha: " .$result[$i]['log_senha']. "<br>";
             }
             
         }

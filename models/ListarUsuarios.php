@@ -18,7 +18,7 @@ class ListarUsuarios{
 			<n class='col s4 m4' style='color: #000'>".$result[$i]['log_nome'].$cat."</n>
 			<a href='deletar-usuario?id=".$result[$i]['log_id']."' title='Clique aqui para deletar'>
 			<i class= 'secondary-content material-icons' 
-			style='color: red; float: right;'>delete_forever</i>
+			style='color: red; float: right;'>delete_forever</i><n style='color: red; font-size: .8em; float: right;'>Remover</n>
 			</a>
 			</div>
 			<div class='collapsible-body col s4 m4' style='background-color: #fcfcfc; color: #000'>

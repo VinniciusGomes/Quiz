@@ -5,17 +5,15 @@
 
 			for ($i=0; $i < sizeof($result); $i++) { 
 				echo "<li>
-                		<div class='collapsible-header' style='background-color: #f5f5f5;'>
-                    		<n class='col s4 m4' style='color: #000'>Questão ".($i+1)." </n>
-                    		<a href='deletar-pergunta?id=".$result[$i]['perg_id']."' title='Clique aqui para deletar'>
-                    			<i class= 'secondary-content material-icons' 
-                    			style='color: red'>delete_forever</i>
-                    		</a>
-                		</div>
-                		<div class='collapsible-body col s4 m4' style='background-color: #fcfcfc; color: #000'>
-                    		<p>".$result[$i]['perg_enunciado']."</p>
-                		</div>
-            		  </li>";
+                <div class='collapsible-header' style='background-color: #f5f5f5;'>
+                <n class='col s4 m4' style='color: #000'>Questão ".($i+1)." </n>
+                <a href='deletar-pergunta?id=".$result[$i]['perg_id']."' title='Clique aqui para deletar'>
+                <i class= 'secondary-content material-icons' style='color: red; float: right;'>delete_forever</i><n style='color: red; font-size: .8em; float: right;'>Remover</n></a>
+                </div>
+                <div class='collapsible-body col s4 m4' style='background-color: #fcfcfc; color: #000'>
+                <p>".$result[$i]['perg_enunciado']."</p>
+                </div>
+            	</li>";
 			}
 		}
 	}
