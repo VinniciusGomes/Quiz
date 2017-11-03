@@ -6,7 +6,7 @@ Um projeto desenvolvido em conjunto com a turma de pedagogia da instituição UN
 
 
 
-![](https://i.imgur.com/HG3GqhS.png)
+![](https://i.imgur.com/IJJ33FE.png)
 
 
 
