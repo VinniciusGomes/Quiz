@@ -1,7 +1,13 @@
+
 # Quiz Pedagogia
 
 
 Um projeto desenvolvido em conjunto com a turma de pedagogia da instituição UNISAL Lorena, para acompanhar a aprendizagem de crianças entre 8 e 10 anos, um Quiz com um painel dinâmico para o professor adicionar perguntas, cadastrar usuários, um rank para o professor acompanhar o histórico de aprendizagem dos alunos sabendo assim se teve alguma evolução.
+
+
+
+![](https://i.imgur.com/HG3GqhS.png)
+
 
 
 ### Versionamento Semântico
