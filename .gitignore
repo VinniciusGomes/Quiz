@@ -4,7 +4,7 @@
 *.ipr
 .idea/
 
-# eclipse project file
+# Eclipse project file
 .settings/
 .classpath
 .project
