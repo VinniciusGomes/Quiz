@@ -1,4 +1,4 @@
-<?php if(!isset($_SESSION['questao'])){$_SESSION['questao'] = 1; } ?>
+﻿<?php if(!isset($_SESSION['questao'])){$_SESSION['questao'] = 1; } ?>
 
 <body onLoad="relogio()" audio='assets/sounds/musicMain.ogg'>
 	<script language="javaScript">
@@ -28,20 +28,40 @@
 			}
 		}
 
-	</script> <audio id="musica" autoplay loop> <source src="horse.ogg" type="audio/ogg"> <source src="" type="audio/mpeg"> Seu navegador não suporta músicas </audio>
-	<script language="javaScript">
-		var x = document.getElementById("musica");
-		x.play();
-
 	</script>
-	<div class="container"><br><br>
-		<div class="sectio"></div> <embed height="0" type="audio/midi" width="0" src="../assets/media/quiz.mp3" volume="60" loop="false" autostart="false" />
+	<div class="container">
+		<div align="center">
+			<div class="section"></div>
+			<div class="reacts">
+			<?php
+                for($i=0; $i < 10; $i++){
+                    $p = "p".$i;
+                    if($_SESSION[$p] == 0){
+                        echo "<div class='circle'><img src='assets/img/emojis/quiz.png' alt='' />
+					               <p>".($i+1)."</p>
+				            </div>";
+                    }elseif($_SESSION[$p] == 1){
+                        echo "<div class='circle'><img src='assets/img/emojis/like.png' alt='' />
+					               <p>Acertou</p>
+				            </div>";
+                    }else{
+                        echo "<div class='circle'><img src='assets/img/emojis/sad.png' alt='' />
+					               <p>Errou</p>
+				            </div>";
+                    }
+                }    
+            ?>
+			</div>
+		</div>
+
+		<div class="section"></div>
 		<div class="section">
 			<div class="row">
 				<h5 class="col s6 m6" style="color: #FFF">Questão
 					<?php echo $_SESSION['questao']?> </h5>
 				<h5 class="col s6 m6" style="font-weight: 300; text-align: right; color: #FFF;" id="spanRelogio"></h5>
 			</div>
+
 			<div class="divider" style="color: #fff"></div>
 		</div>
 		<?php $pergunta = new BuscarPergunta(); $enunciado = $pergunta->buscar(); $id = $_SESSION['id_perg']; ?>
@@ -54,6 +74,8 @@
 			<div class="row">
 				<div class="col s5 m5">
 					<?php $pergunta->alternativas($id); ?> </div>
-			</div> <button type="submit" class="col s12 m12 btn waves-effect laranja">Próxima</button> </form>
+			</div>
+			<button type="submit" class="col s12 m12 btn waves-effect laranja">Próxima</button>
+		</form>
 	</div>
 </body>

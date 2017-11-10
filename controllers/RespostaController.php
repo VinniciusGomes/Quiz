@@ -15,6 +15,15 @@
            
            if($resposta == 1){
                $_SESSION['pontuacao'] = $_SESSION['pontuacao'] + 1;
+               //Linhas para adição dos emojis de certo
+               $q = $_SESSION['questao'] - 1;
+               $p = "p".$q;
+               $_SESSION[$p] = 1;
+           }else{
+               //Linhas para adição dos emojis de errado
+               $q = $_SESSION['questao'] - 1;
+               $p = "p".$q;
+               $_SESSION[$p] = 2;
            }
            
            if(!isset($_SESSION['questao'])){

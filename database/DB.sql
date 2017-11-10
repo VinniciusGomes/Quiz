@@ -64,13 +64,16 @@ CREATE TABLE rank (
 	FOREIGN KEY (rank_log_id) REFERENCES login(log_id)
 );
 
+
 -- Usuário Padrao
 INSERT INTO login (log_usuario, log_nome, log_senha, log_nivel, log_dat_cad) VALUES ("admin", "Administrador", "admin", 0, "2017-10-10");
+
 
 -- Categorias de perguntas
 INSERT INTO categoria (cat_materia) VALUES ("Matematica");
 INSERT INTO categoria (cat_materia) VALUES ("Historia");
 INSERT INTO categoria (cat_materia) VALUES ("Geografia");
+
 
 -- Perguntas
 INSERT INTO pergunta (perg_enunciado, perg_cat_id) VALUES ('Onde aconteceu a inconfidência mineira?',2);
@@ -83,6 +86,7 @@ INSERT INTO pergunta (perg_enunciado, perg_cat_id) VALUES ('Um livro tem 394 pá
 INSERT INTO pergunta (perg_enunciado, perg_cat_id) VALUES ('Quanto é 2015 - 150?',1);
 INSERT INTO pergunta (perg_enunciado, perg_cat_id) VALUES ('Ganhei 120 balas, dei 45 para Maria e 36 para Marina, com quantas balas fiquei?',1);
 INSERT INTO pergunta (perg_enunciado, perg_cat_id) VALUES ('Vovô tem 70 anos, vovó tem 8 anos a menos. Quantos anos os dois têm juntos?',1);
+
 
 -- Alternativas
 INSERT INTO alternativa (alt_texto, alt_perg_id, alt_resposta) VALUES ('Ouro Preto - Minas Gerais',1,1);

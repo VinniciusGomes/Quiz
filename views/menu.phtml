@@ -1,4 +1,16 @@
-<?php if(isset($_SESSION['questao'])){$_SESSION['questao'] = 1; } if(isset($_SESSION['pontuacao'])){$_SESSION['pontuacao'] = 0; } ?>
+<?php 
+    if(isset($_SESSION['questao'])){
+        $_SESSION['questao'] = 1; 
+    } 
+    if(isset($_SESSION['pontuacao'])){
+        $_SESSION['pontuacao'] = 0; 
+    } 
+    // Setando valor da sessao em [p] para uso com emojis
+    for($i=0; $i < 10; $i++){
+        $p = "p".$i;
+        $_SESSION[$p] = 0;
+    }
+?>
 <div class="container">
 	<ul class="s6 offset-s6 listaId">
 		<li class="idUser"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
