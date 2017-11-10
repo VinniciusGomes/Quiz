@@ -63,4 +63,4 @@ x.y.z - X é a versão Maior, Y é a versão Menor, e Z é a versão de Correç�
 ## Licença
 
 
-Este projeto está licenciado sob o MIT License - consulte o arquivo [LICENSE.md](LICENSE) para obter detalhes.
+Este projeto está licenciado sob o MIT License - consulte o arquivo [licença](LICENSE) para obter detalhes.
