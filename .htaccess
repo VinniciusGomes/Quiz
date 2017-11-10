@@ -2,6 +2,7 @@
 RewriteEngine On
 
 # Alguns servidores usam isso
+
 # RewriteBase /sistemas/quiz 
 
 # Condições se não for um arquivo ou diretorio
