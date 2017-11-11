@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class ListarRank{
 	public function listar(){
         if($_SESSION['nivel'] == 1){
@@ -22,7 +22,6 @@ class ListarRank{
             		  <div style='color: #000'><div style='font-size: .9em; font-weight: 700;'>Nome </div>".$result[$i]['log_nome']."</div>
         		      </li>";
             }    
-
 		  }
         }else{
             $result = Db::queryAll("SELECT log_nome, log_id, max(rank_pontuacao) as rank_pontuacao 
