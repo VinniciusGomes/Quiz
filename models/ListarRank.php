@@ -25,11 +25,11 @@ class ListarRank{
 		  }
         }else{
             $result = Db::queryAll("SELECT log_nome, log_id, max(rank_pontuacao) as rank_pontuacao 
-                FROM rank INNER JOIN login ON rank.rank_log_id=login.log_id AND rank.rank_pontuacao <= 10 GROUP BY login.log_nome ORDER BY rank_pontuacao DESC");
+                FROM rank INNER JOIN login ON rank.rank_log_id=login.log_id AND rank.rank_pontuacao <= 10 GROUP BY login.log_nome ORDER BY log_nome");
 
             for ($i=0; $i < sizeof($result); $i++) {
             	//Buscando dados para o grafico
-            	$teste = Db::queryAll("SELECT rank_data, rank_pontuacao FROM rank WHERE rank_log_id=? ORDER BY rank_data DESC LIMIT 5", array($result[$i]['log_id']));
+            	$teste = Db::queryAll("(SELECT rank_data, rank_pontuacao FROM rank WHERE rank_log_id=? ORDER BY rank_data DESC LIMIT 5) ORDER BY rank_data", array($result[$i]['log_id']));
                 $ec = "";
             	for ($j=0; $j < sizeof($teste); $j++){
             		$pont = $teste[$j]['rank_pontuacao'];
