@@ -30,11 +30,21 @@
 			}
         }
         
-//        public function pegaId($enunciado){
-//            //Db::connect('localhost', 'root', '', 'quizpedag');
-//			$result = Db::queryOne("SELECT perg_id FROM pergunta WHERE perg_enunciado=?", array($enunciado));
-//            $id = $result['perg_id'];
-//            return $id;
-//        }
+        public function buscarAlterar($id){
+            $result = Db::queryAll("SELECT perg_enunciado FROM pergunta WHERE perg_id=?", array($id));
+            
+            for($i=0; $i < sizeof($result); $i++){
+                $data = array($result[$i]['perg_enunciado']);
+            }
+            
+            $result = Db::queryAll("SELECT alt_id, alt_texto, alt_resposta FROM alternativa WHERE alt_perg_id=? ORDER BY alt_id", array($id));
+            
+            for($j=0; $j < sizeof($result); $j++){
+                array_push($data, $result[$j]['alt_texto']);
+                array_push($data, $result[$j]['alt_id']);
+            }
+            
+            return $data;
+        }
 	}
 ?>
