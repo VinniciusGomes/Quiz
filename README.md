@@ -50,6 +50,7 @@ x.y.z - X é a versão Maior, Y é a versão Menor, e Z é a versão de Correç�
 ## Desenvolvedores
 
 **Front-End** - @VinniciusGomes<br>
+
 **Back-End** - @FelipeNS
 
 
