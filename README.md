@@ -49,9 +49,9 @@ x.y.z - X é a versão Maior, Y é a versão Menor, e Z é a versão de Correç�
 
 ### Programadores
 
-**Front-End** - @VinniciusGomes<br>
+**Front-End** - [@VinniciusGomes](https://github.com/VinniciusGomes)<br>
 
-**Back-End** - @FelipeNS
+**Back-End** - [@FelipeNS](https://github.com/FelipeNS)
 
 
 ### Colaboradores
