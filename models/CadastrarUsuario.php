@@ -14,14 +14,14 @@ class CadastrarUsuario{
 	}
 
 	public function verifica($nome){
-		Db::connect('localhost', 'root', '', 'quizpedag');
+		//Db::connect('localhost', 'root', '', 'quizpedag');
 		// Buscando usuarios existentes
 		$result = Db::queryAll("SELECT log_nome FROM login WHERE log_nome=?", array($nome));
 		return $result;
 	}
 
 	public function verificaNick($nick){
-		Db::connect('localhost', 'root', '', 'quizpedag');
+		//Db::connect('localhost', 'root', '', 'quizpedag');
 		// Buscando usuarios existentes
 		$result = Db::queryAll("SELECT log_usuario FROM login WHERE log_usuario=?", array($nick));
 		return $result;

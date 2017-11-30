@@ -20,13 +20,17 @@
                         <input class='validate' type='password' name='password' id='password' tabindex="2" minlength="5" maxlength="15" style="color:#000" required>
                         <label for='password'>Sua senha</label>
                     </div>
-                    <label style='float: right;'> <p class='orange-text' style=" font-family: 'Roboto', sans-serif; font-size: 10px;">Preencha todos os campos</p></label>
+                    <label style='float: right;'>
+                        <p class='orange-text' style=" font-family: 'Roboto', sans-serif; font-size: 10px;">Preencha todos os campos</p>
+                    </label>
                 </div><br>
                 <div class="center">
                     <?php if(isset($_GET['e'])){$erro=$_GET['e']; if($erro==1){echo "<label> <b style='font-size: 13px; color: #ec1c24; font-family: 'Roboto', sans-serif;  text-align:center;' data-error='wrong'>Não foi possível encontrar sua conta. Tente novamente.</b> </label>";}}?>
                 </div><br>
                 <div align="center">
-                    <div class='row'><button type='submit' value="Entrar" name='btn_login' tabindex="3" class="col s12 btn btn-large waves-effect laranja">Entrar</button></div>
+                    <div class='row'>
+                        <button type='submit' value="Entrar" name='btn_login' tabindex="3" class="col s12 btn btn-large waves-effect laranja">Entrar</button>
+                    </div>
                 </div>
             </form>
         </div>

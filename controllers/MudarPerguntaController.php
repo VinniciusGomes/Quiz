@@ -21,11 +21,11 @@
                     $result = $alterar->alterar($id, $enunciado, $materia);
                     $result2 = $alterar->alternativas($id_ac, $id_ai1, $id_ai2, $id_ai3, $altCorreta, $altInc1, $altInc2, $altInc3);
                     
-                    if($result != 0){
+                    //if($result != 0){
                         $this->redirect('editar-perguntas');
-                    }else{
-                        echo "Nao foi bagaça";
-                    }
+                    //}else{
+                      //  echo "Nao foi bagaça";
+                    //}
                 }
             }else{
                 echo "Sem valores setados";

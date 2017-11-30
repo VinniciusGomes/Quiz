@@ -11,7 +11,7 @@
     
     // Conexao Com banco de dados
     try {
-        Db::connect('10.1.2.110', 'u405443155_quizp', 'quizpedag', 'u405443155_quizp');
+        Db::connect('localhost', 'u109103800_quiz', 'quiz123', 'u109103800_quiz');
         //Db::connect('localhost', 'root', '', 'quizpedag');
     } catch (Exception $e) {
         die("Erro ao conectar ao banco de dados!");
