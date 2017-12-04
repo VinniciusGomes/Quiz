@@ -60,7 +60,7 @@ x.y.z - X é a versão Maior, Y é a versão Menor, e Z é a versão de Correç�
 
 **Professoras** - Ellen Juliane, Ariadne Monteiro, Rafaela Bastos e Arielli Nely.<br>
 
-**Participantes** - João Gabriel, João Pedro.
+**Participantes** - João Gabriel e João Pedro.
 
 ## Licença
 
