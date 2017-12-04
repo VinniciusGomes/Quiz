@@ -4,7 +4,6 @@
 
 ![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)
 
-(https://github.com/thedaviddias/Front-End-Checklist/)
 Um projeto desenvolvido em conjunto com a turma de pedagogia da instituição UNISAL Lorena, para acompanhar a aprendizagem de crianças entre 8 e 10 anos, um Quiz com um painel dinâmico para o professor adicionar perguntas, cadastrar usuários, um rank para o professor acompanhar o histórico de aprendizagem dos alunos sabendo assim se teve alguma evolução.
 
 
