@@ -50,7 +50,7 @@ x.y.z - X is the Bigger version, Y is the Minor version, and Z is the correction
 
 ### Developers
 
-**Front-End** - [@VinniciusGomes](https://github.com/VinniciusGomes)<br>
+**Front-End** - [@vinniciusgomes](https://github.com/VinniciusGomes)<br>
 
 **Back-End** - [@FelipeNS](https://github.com/FelipeNS)
 
